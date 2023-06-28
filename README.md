@@ -28,7 +28,7 @@
 | condition_id       | integer    | null: false                    |
 | prefecture_id      | integer	  |null: false                     |
 | transport_day_id   | integer  	|null: false                     |
-| delivery_charge_id |integer  	  |null: false                     |
+| delivery_charge_id | integer  	|null: false                     |
 
 ## Association
 - has_one :order
@@ -53,8 +53,8 @@
 
 | Column           | Type       | Options                        |
 | ---------------  | ---------- | ------------------------------ |
-| user_id          | string     | null: false                    |
-| item_id          | text       | null: false                    |
+| user             | references	| null: false, foreign_key: true |
+| item             | references	| null: false, foreign_key: true |
 
 ## Association
 - belongs_to :user
