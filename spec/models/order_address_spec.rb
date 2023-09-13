@@ -77,12 +77,12 @@ RSpec.describe OrderAddress, type: :model do
       it 'item_idが紐付いていないと購入できないこと' do
       @order_address.item_id = nil
       @order_address.valid?
-      expect(@order_address.errors.full_messages).to include()
+      expect(@order_address.errors.full_messages).to include("Item is invalid")
       end
       it 'user_idが紐付いていないと購入できないこと' do
        @order_address.user_id = nil
       @order_address.valid?
-       expect(@order_address.errors.full_messages).to include()
+       expect(@order_address.errors.full_messages).to include("User is invalid")
       end
     end
   end
